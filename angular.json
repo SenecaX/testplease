@@ -2,7 +2,16 @@
   "$schema": "./node_modules/nx/schemas/workspace-schema.json",
   "version": 2,
   "projects": {
-    "todos": "apps/todos",
-    "todos-e2e": "apps/todos-e2e"
+    "fleet-management-dashboard": "apps/fleet-management-dashboard",
+    "fleet-management-dashboard-e2e": "apps/fleet-management-dashboard-e2e",
+    "please-ui-ecosystem": "libs/please-ui-ecosystem",
+    "please-ui-ecosystem-e2e": "apps/please-ui-ecosystem-e2e",
+    "tailwind-preset": {
+      "projectType": "library",
+      "root": "libs/tailwind-preset",
+      "sourceRoot": "libs/tailwind-preset",
+      "architect": {},
+      "tags": []
+    }
   }
 }

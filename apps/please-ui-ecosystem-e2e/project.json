@@ -1,0 +1,28 @@
+{
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/please-ui-ecosystem-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/please-ui-ecosystem-e2e/cypress.json",
+        "devServerTarget": "please-ui-ecosystem:storybook"
+      },
+      "configurations": {
+        "ci": {
+          "devServerTarget": "please-ui-ecosystem:storybook:ci"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/please-ui-ecosystem-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["please-ui-ecosystem"]
+}

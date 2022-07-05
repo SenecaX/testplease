@@ -1,0 +1,71 @@
+{
+  "projectType": "library",
+  "sourceRoot": "libs/please-ui-ecosystem/src",
+  "prefix": "testplease",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:ng-packagr-lite",
+      "outputs": ["dist/libs/please-ui-ecosystem"],
+      "options": {
+        "project": "libs/please-ui-ecosystem/ng-package.json",
+        "tailwindConfig": "libs/please-ui-ecosystem/tailwind.config.js"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/please-ui-ecosystem/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/please-ui-ecosystem/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/please-ui-ecosystem"],
+      "options": {
+        "jestConfig": "libs/please-ui-ecosystem/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/please-ui-ecosystem/**/*.ts",
+          "libs/please-ui-ecosystem/**/*.html"
+        ]
+      }
+    },
+    "storybook": {
+      "executor": "@storybook/angular:start-storybook",
+      "options": {
+        "port": 4400,
+        "configDir": "libs/please-ui-ecosystem/.storybook",
+        "browserTarget": "please-ui-ecosystem:build-storybook",
+        "compodoc": false
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    },
+    "build-storybook": {
+      "executor": "@storybook/angular:build-storybook",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputDir": "dist/storybook/please-ui-ecosystem",
+        "configDir": "libs/please-ui-ecosystem/.storybook",
+        "browserTarget": "please-ui-ecosystem:build-storybook",
+        "compodoc": false
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    }
+  },
+  "tags": []
+}

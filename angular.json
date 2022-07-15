@@ -4,13 +4,39 @@
   "projects": {
     "fleet-management-dashboard": "apps/fleet-management-dashboard",
     "fleet-management-dashboard-e2e": "apps/fleet-management-dashboard-e2e",
+    "material": {
+      "projectType": "library",
+      "root": "libs/material",
+      "sourceRoot": "libs/material/src",
+      "prefix": "testplease",
+      "targets": {
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/material"],
+          "options": {
+            "jestConfig": "libs/material/jest.config.ts",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/material/**/*.ts",
+              "libs/material/**/*.html"
+            ]
+          }
+        }
+      },
+      "tags": []
+    },
     "please-ui-ecosystem": "libs/please-ui-ecosystem",
     "please-ui-ecosystem-e2e": "apps/please-ui-ecosystem-e2e",
     "tailwind-preset": {
       "projectType": "library",
       "root": "libs/tailwind-preset",
       "sourceRoot": "libs/tailwind-preset",
-      "architect": {},
+      "targets": {},
       "tags": []
     }
   }

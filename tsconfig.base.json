@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@testplease/material": ["libs/material/src/index.ts"],
       "@testplease/please-ui-ecosystem": [
         "libs/please-ui-ecosystem/src/index.ts"
       ]

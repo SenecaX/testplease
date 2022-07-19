@@ -40,6 +40,7 @@ import { LoginComponent } from './patterns/login/login.component';
     PleaseButtonComponent,
     PleaseProgressBarComponent,
     PleaseInputComponent,
+    LoginComponent,
   ],
 })
 export class PleaseUiEcosystemModule {}

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'testplease-login',
@@ -6,11 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent {
-  public submitColor: string | undefined;
-  public submitText: string | undefined;
+  @Input() submitColor: string | undefined;
+  @Input() submitText: string | undefined;
 
-  public cancelColor: string | undefined;
-  public cancelText: string | undefined;
+  @Input() cancelColor: string | undefined;
+  @Input() cancelText: string | undefined;
 
   constructor() {
     // this.submitColor = 'primary';

@@ -1,1 +1,15 @@
 @import '~@angular/material/prebuilt-themes/indigo-pink.css';
+
+.login-container {
+  width: '100%';
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+}

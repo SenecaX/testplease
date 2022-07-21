@@ -11,6 +11,8 @@ import { PleaseProgressBarComponent } from './atoms/please-progress-bar/please-p
 import { PleaseInputComponent } from './atoms/please-input/please-input.component';
 import { LoginComponent } from './patterns/login/login.component';
 import { NG_VALUE_ACCESSOR, ReactiveFormsModule } from '@angular/forms';
+import { PleaseTaskComponent } from './atoms/please-task/please-task.component';
+import { PleaseTaskListComponent } from './patterns/task-list/task-list.component';
 
 @NgModule({
   imports: [
@@ -28,6 +30,8 @@ import { NG_VALUE_ACCESSOR, ReactiveFormsModule } from '@angular/forms';
     PleaseProgressBarComponent,
     PleaseInputComponent,
     LoginComponent,
+    PleaseTaskComponent,
+    PleaseTaskListComponent,
     // PleaseProgressSpinnerComponent,
     // PleaseSelectComponent,
     // PleaseSliderComponent,

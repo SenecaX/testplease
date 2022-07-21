@@ -12,6 +12,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { fakeBackendProvider } from './pleasecore/helpers/fake-backend';
 import { FmdLoginComponent } from './screens/fmd-login/fmd-login.component';
+import { PleaseTaskComponent } from './atoms/please-task/please-task.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { FmdLoginComponent } from './screens/fmd-login/fmd-login.component';
     NxWelcomeComponent,
     HomeComponent,
     FmdLoginComponent,
+    PleaseTaskComponent,
   ],
   imports: [
     BrowserModule,

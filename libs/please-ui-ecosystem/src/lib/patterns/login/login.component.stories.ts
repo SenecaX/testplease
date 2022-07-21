@@ -11,6 +11,7 @@ import { CommonModule } from '@angular/common';
 import { MaterialModule } from '../../material/material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PleaseButtonComponent } from '../../atoms/please-button/please-button.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 export default {
   title: 'Design System/patterns/Login',
@@ -18,7 +19,12 @@ export default {
   decorators: [
     moduleMetadata({
       declarations: [PleaseInputComponent, PleaseButtonComponent],
-      imports: [CommonModule, BrowserAnimationsModule, MaterialModule],
+      imports: [
+        CommonModule,
+        BrowserAnimationsModule,
+        MaterialModule,
+        ReactiveFormsModule,
+      ],
     }),
     componentWrapperDecorator(
       (story) => `<div style="margin: 3em">${story}</div>`
@@ -29,15 +35,10 @@ export default {
 const Template: Story<LoginComponent> = (args: LoginComponent) => ({
   props: {
     ...args,
-    submitText: 'Cancel',
+    submitText: 'Login',
     submitColor: 'primary',
-    cancelText: 'Submit',
-    cancelColor: 'warn',
   },
 });
 
 export const Primary = Template.bind({});
 Primary.args = {};
-
-export const OneItem = Template.bind({});
-OneItem.args = {};

@@ -7,18 +7,18 @@ import { RouterModule } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PleaseUiEcosystemModule } from '@testplease/please-ui-ecosystem';
 import { HomeComponent } from './screens/home/home.component';
-import { LoginComponent } from './screens/login/login.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { fakeBackendProvider } from './pleasecore/helpers/fake-backend';
+import { FmdLoginComponent } from './screens/fmd-login/fmd-login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NxWelcomeComponent,
     HomeComponent,
-    LoginComponent,
+    FmdLoginComponent,
   ],
   imports: [
     BrowserModule,

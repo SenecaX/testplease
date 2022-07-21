@@ -13,6 +13,7 @@ import { LoginComponent } from './patterns/login/login.component';
 import { NG_VALUE_ACCESSOR, ReactiveFormsModule } from '@angular/forms';
 import { PleaseTaskComponent } from './atoms/please-task/please-task.component';
 import { PleaseTaskListComponent } from './patterns/task-list/task-list.component';
+import { TestScreenComponent } from './screens/test-screen/test-screen.component';
 
 @NgModule({
   imports: [
@@ -32,6 +33,7 @@ import { PleaseTaskListComponent } from './patterns/task-list/task-list.componen
     LoginComponent,
     PleaseTaskComponent,
     PleaseTaskListComponent,
+    TestScreenComponent,
     // PleaseProgressSpinnerComponent,
     // PleaseSelectComponent,
     // PleaseSliderComponent,
